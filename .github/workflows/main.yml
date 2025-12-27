@@ -18,7 +18,7 @@ jobs:
     - name: Setup Theos
       run: |
         sudo apt-get update
-        sudo apt-get install -y git curl perl clang
+        sudo apt-get install -y git curl perl clang libtinfo5 libncurses5
         git clone --recursive https://github.com/theos/theos.git $HOME/theos
         curl -LO https://github.com/sbingner/llvm-project/releases/latest/download/linux-ios-arm64e-clang-toolchain.tar.lzma
         TMP=$(mktemp -d)
