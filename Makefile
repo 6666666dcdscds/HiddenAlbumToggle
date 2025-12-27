@@ -10,7 +10,7 @@ HiddenAlbumToggle_FILES = Tweak.x
 HiddenAlbumToggle_FRAMEWORKS = UIKit CoreFoundation
 HiddenAlbumToggle_PRIVATE_FRAMEWORKS = ControlCenterUIKit
 HiddenAlbumToggle_INSTALL_PATH = /Library/ControlCenter/Bundles
-HiddenAlbumToggle_CFLAGS = -fobjc-arc
+HiddenAlbumToggle_CFLAGS = -fobjc-arc -fno-objc-modules
 
 include $(THEOS_MAKE_PATH)/bundle.mk
 
