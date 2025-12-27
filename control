@@ -1,0 +1,11 @@
+Package: com.yourname.hiddenalbumtoggle
+Name: Hidden Album Toggle
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 在控制中心快速切换"已隐藏"相簿的显示状态
+Maintainer: Your Name
+Author: Your Name
+Section: Control Center (Modules)
+Depends: mobilesubstrate, firmware (>= 16.0), com.roothide.loader
+Icon: https://example.com/icon.png
+

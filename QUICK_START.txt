@@ -1,0 +1,81 @@
+╔══════════════════════════════════════════════════════════════════╗
+║          🚀 GitHub Actions 自动编译 - 快速开始                    ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📋 步骤总览：
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  创建 GitHub 仓库
+   → 访问: https://github.com/new
+   → 仓库名: HiddenAlbumToggle
+   → ⚠️  不要勾选任何初始化选项
+   → 复制仓库地址
+
+2️⃣  推送代码（选择一种方法）
+   
+   方法 A - 自动脚本（推荐）:
+   → Windows: 双击 push-to-github.bat
+   → Linux/WSL: ./push-to-github.sh
+   
+   方法 B - 手动命令:
+   git init
+   git branch -M main
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin https://github.com/你的用户名/仓库名.git
+   git push -u origin main
+
+3️⃣  查看编译进度
+   → 访问仓库页面
+   → 点击 "Actions" 标签
+   → 等待编译完成（约 2-5 分钟）
+
+4️⃣  下载 .deb 文件
+   → 点击成功的工作流运行
+   → 滚动到底部 "Artifacts"
+   → 下载 "HiddenAlbumToggle-deb"
+   → 解压得到 .deb 文件
+
+5️⃣  安装到设备
+   → 传输 .deb 到 iOS 设备
+   → 使用 Filza 安装
+   → 重启 SpringBoard
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 已创建的文件：
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ .github/workflows/build.yml  - GitHub Actions 配置
+✅ .gitignore                   - Git 忽略文件
+✅ push-to-github.bat           - Windows 推送脚本
+✅ push-to-github.sh            - Linux 推送脚本
+✅ GITHUB_ACTIONS_SETUP.md      - 详细设置指南
+✅ BUILD_INSTRUCTIONS.md        - 编译说明
+✅ QUICK_START.txt              - 本文件
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔗 有用的链接：
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• 创建新仓库: https://github.com/new
+• GitHub Actions 文档: https://docs.github.com/actions
+• Git 下载: https://git-scm.com/downloads
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 提示：
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• 每次推送代码都会自动编译
+• 可以创建私有仓库保护代码
+• 编译完全免费（GitHub Actions 免费额度）
+• Artifacts 保存 90 天
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 详细说明请查看: GITHUB_ACTIONS_SETUP.md
+
+祝你编译顺利！🎉
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>HiddenAlbumToggle</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourname.hiddenalbumtoggle</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>HiddenAlbumToggle</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>NSPrincipalClass</key>
+	<string>HiddenAlbumToggleModule</string>
+	<key>CCUIModuleIdentifier</key>
+	<string>com.yourname.hiddenalbumtoggle</string>
+	<key>CCUIModuleSize</key>
+	<dict>
+		<key>Portrait</key>
+		<dict>
+			<key>Height</key>
+			<integer>1</integer>
+			<key>Width</key>
+			<integer>1</integer>
+		</dict>
+		<key>Landscape</key>
+		<dict>
+			<key>Height</key>
+			<integer>1</integer>
+			<key>Width</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SBIconDisplayName</key>
+	<string>已隐藏相簿</string>
+	<key>CFBundleDisplayName</key>
+	<string>已隐藏相簿</string>
+</dict>
+</plist>
+
