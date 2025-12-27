@@ -16,11 +16,24 @@ jobs:
       uses: actions/checkout@v4
     
     - name: Setup Theos
-      uses: Randomblock1/theos-action@v1
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y git curl perl clang
+        git clone --recursive https://github.com/theos/theos.git $HOME/theos
+        curl -LO https://github.com/sbingner/llvm-project/releases/latest/download/linux-ios-arm64e-clang-toolchain.tar.lzma
+        TMP=$(mktemp -d)
+        tar -xvf linux-ios-arm64e-clang-toolchain.tar.lzma -C $TMP
+        mkdir -p $HOME/theos/toolchain/linux/iphone
+        mv $TMP/ios-arm64e-clang-toolchain/* $HOME/theos/toolchain/linux/iphone/
+        curl -LO https://github.com/theos/sdks/archive/master.zip
+        unzip master.zip -d $TMP
+        mv $TMP/sdks-master/*.sdk $HOME/theos/sdks/
       
     - name: Build Package
       run: |
-        make package
+        export THEOS=$HOME/theos
+        export PATH=$THEOS/bin:$PATH
+        make package FINALPACKAGE=1
       
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
