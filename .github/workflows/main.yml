@@ -19,15 +19,20 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y git curl perl clang libtinfo5 libncurses5 unzip
+        
+        # Clone Theos
         git clone --recursive https://github.com/theos/theos.git $HOME/theos
+        
+        # Download and install toolchain
         curl -LO https://github.com/sbingner/llvm-project/releases/latest/download/linux-ios-arm64e-clang-toolchain.tar.lzma
         TMP=$(mktemp -d)
         tar -xvf linux-ios-arm64e-clang-toolchain.tar.lzma -C $TMP
         mkdir -p $HOME/theos/toolchain/linux/iphone
         mv $TMP/ios-arm64e-clang-toolchain/* $HOME/theos/toolchain/linux/iphone/
-        curl -LO https://github.com/theos/sdks/archive/master.zip
-        unzip master.zip -d $TMP
-        mv $TMP/sdks-master/*.sdk $HOME/theos/sdks/
+        
+        # Download and install iOS SDK
+        curl -LO https://github.com/theos/sdks/releases/download/master/iPhoneOS16.5.sdk.tar.xz
+        tar -xf iPhoneOS16.5.sdk.tar.xz -C $HOME/theos/sdks/
       
     - name: Build Package
       run: |
