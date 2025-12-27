@@ -18,7 +18,7 @@ jobs:
     - name: Setup Theos
       run: |
         sudo apt-get update
-        sudo apt-get install -y git curl perl clang libtinfo5 libncurses5 unzip
+        sudo apt-get install -y git curl perl clang libtinfo5 libncurses5 unzip fakeroot
         
         # Clone Theos
         git clone --recursive https://github.com/theos/theos.git $HOME/theos
@@ -30,9 +30,11 @@ jobs:
         mkdir -p $HOME/theos/toolchain/linux/iphone
         mv $TMP/ios-arm64e-clang-toolchain/* $HOME/theos/toolchain/linux/iphone/
         
-        # Download and install iOS SDK
-        curl -LO https://github.com/theos/sdks/releases/download/master/iPhoneOS16.5.sdk.tar.xz
-        tar -xf iPhoneOS16.5.sdk.tar.xz -C $HOME/theos/sdks/
+        # Download iOS SDK using git
+        cd $HOME/theos/sdks
+        git clone https://github.com/theos/sdks.git temp_sdks
+        mv temp_sdks/iPhoneOS16.5.sdk ./
+        rm -rf temp_sdks
       
     - name: Build Package
       run: |
